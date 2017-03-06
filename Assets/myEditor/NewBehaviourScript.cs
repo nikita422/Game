@@ -32,9 +32,18 @@ public class NewBehaviourScript : MonoBehaviour
         if (curBlock) Destroy(curBlock);
         print("ShipsBlock/" + _n.ToString());
         curBlock = Instantiate((GameObject)Resources.Load("ShipsBlock/" + _n.ToString(), typeof(GameObject)), parent.transform);
+        curBlock.transform.tag = "EditorOnly";
         
     }
 
+    public void instance(string name,Vector2 _pos)
+    {
+ 
+        GameObject block = Instantiate((GameObject)Resources.Load("ShipsBlock/" + name, typeof(GameObject)), parent.transform);
+        block.transform.position = _pos;
+        
+
+    }
 
 
     void Update()
@@ -106,19 +115,42 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void save()
     {
-        int valueOneType, valueTwoType;
+        Ship ship = new Ship();
+        ship.name = "1";
+        
 
         GameObject[] blocks= GameObject.FindGameObjectsWithTag("EditorOnly");
         for (int i = 0; i < blocks.Length; i++)
         {
             string name = blocks[i].name.Substring(0,1); //get type + number-------------
-            switch( name){
-
-            }
+            ship.addBlock(name, blocks[i].transform.position); 
         }
+
+        Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Save<Ship>("C:/ds.xml", ship);
+
+
     }
     public void load()
     {
+        Ship ship = new Ship();
 
+        ship = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<Ship>("C:/ds.xml");
+
+        List<Ship.Block> blocks = new List<Ship.Block>();
+        blocks = ship.blocks;
+        for (int i = 0; i < blocks.Count; i++)
+        {
+            instance(blocks[i].name, blocks[i].pos);
+        }
+    }
+
+
+    public void clear()
+    {
+        GameObject[] blocks = GameObject.FindGameObjectsWithTag("EditorOnly");
+        for (int i = 0; i < blocks.Length; i++)
+        {
+            Destroy(blocks[i]);
+        }
     }
 }
