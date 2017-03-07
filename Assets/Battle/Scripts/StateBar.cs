@@ -21,7 +21,7 @@ public class StateBar : MonoBehaviour {
         core = Ship.GetComponent<Core>();
 
         shipTransform = Ship.transform;
-         line = Instantiate(barLinePrefab,this.transform);
+        line = Instantiate(barLinePrefab,this.transform);
         barLineRen = line.GetComponent<LineRenderer>();
         
     }
@@ -38,6 +38,7 @@ public class StateBar : MonoBehaviour {
 
 
         calcHealth = core.curHealth / core.maxHealth;
+        
         Hbar.transform.localScale = new Vector3(calcHealth, transform.localScale.y, transform.localScale.z);
 
         calcEnergy = core.curEnergy / core.maxEnergy;

@@ -4,15 +4,22 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 public class NewBehaviourScript : MonoBehaviour
 {
+    /*
+     редактор
+     
+         
+         */
 
+    
 
 
     GameObject parent;
+
+ 
     /*
-     Кнопка открывающая меню
+                 
          
-         
-         
+            
          
          
          */
@@ -23,6 +30,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         parent = GameObject.Find("0");
+        
     }
 
 
@@ -38,11 +46,8 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void instance(string name,Vector2 _pos)
     {
- 
-        GameObject block = Instantiate((GameObject)Resources.Load("ShipsBlock/" + name, typeof(GameObject)), parent.transform);
+       GameObject block = Instantiate((GameObject)Resources.Load("ShipsBlock/" + name, typeof(GameObject)), parent.transform);
         block.transform.position = _pos;
-        
-
     }
 
 
@@ -52,6 +57,7 @@ public class NewBehaviourScript : MonoBehaviour
 
         if (curBlock)
         {
+          
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 intPos = new Vector2(Mathf.CeilToInt(pos.x), Mathf.CeilToInt(pos.y));
             //   curBlock.transform.position = Vector2.Lerp(curBlock.transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition),0.5f);
@@ -62,6 +68,8 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && curBlock)
         {
             curBlock = null;
+            
+
         }
 
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !curBlock)

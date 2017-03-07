@@ -30,7 +30,8 @@ public class Fire_manager : MonoBehaviour
         }
         else
         {             
-            target = GameObject.FindGameObjectWithTag("Player").transform;
+            //r
+         //   target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
 

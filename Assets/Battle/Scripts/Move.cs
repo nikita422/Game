@@ -5,7 +5,7 @@ using System.Collections;
 Rsponsibility: плавное передвижение
 Duality:       true    
      
-
+    вынести поиск врага наружу
 
 
     -:

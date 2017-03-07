@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Core : MonoBehaviour
 {
-    //1
-    /*
-     исттанциировать один пусстой объект с тремя главными скриптаи
-         
+    /*/***1
+   nez instan
          
          */
 
@@ -17,15 +15,6 @@ public class Core : MonoBehaviour
     GameObject hit_explosion;
     public bool isPlayer;
  
-      /*
-     * First instantiate
-     * 
-     * 
-     * 
-      
-     * 
-     * 
-     */
 
     public float curHealth, maxHealth, deltaHealth;
     public float curEnergy, maxEnergy, deltaEnergy;
