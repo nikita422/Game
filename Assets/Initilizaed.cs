@@ -13,13 +13,15 @@ public class Initilizaed : MonoBehaviour {
          
          
          */
-
-
+    List<string> shipsName;
+    public GameObject slotShip;//btn
     GameObject PlayerCoreBlock;
     GameObject  EnemyCoreBlock;
     
 
 	void Start () {
+        shipsName = new List<string>();
+        shipsName= Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ds.xml");
 
         PlayerCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
         PlayerCoreBlock.tag = "Player";
@@ -27,14 +29,13 @@ public class Initilizaed : MonoBehaviour {
         EnemyCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
         EnemyCoreBlock.tag = "Enemy";
 
-        initShipp(true,"ds");
+        
+
+        //initShipp(true,"ds");
 
     }
 	
-    public void initShips(string _playerShip, string _enemyShip)
-    {
-    
-    }
+     
 
     void initShipp(bool _isPlayer, string _name)
     {

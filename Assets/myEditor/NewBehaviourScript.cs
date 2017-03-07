@@ -7,14 +7,14 @@ public class NewBehaviourScript : MonoBehaviour
     /*
      редактор
      
-         
+         слотовая система сохраненийы
          */
 
     
 
-
+     
     GameObject parent;
-
+    List<string> shipsName;
  
     /*
                  
@@ -29,8 +29,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
+        shipsName = new List<string>();
+        shipsName = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ships.xml");
         parent = GameObject.Find("0");
-        
     }
 
 
@@ -108,24 +109,15 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
-    /*
-     * 
-     * 1_1x
-     * 1_1y
-     * 1_2
-     * 1_3
-     * 
-     * 
-     * 
-     */
+ 
 
 
 
     public void save()
     {
         Ship ship = new Ship();
-        ship.name = "1";
-        
+        shipsName.Add( (shipsName.Count+1).ToString());
+        Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Save<List<string>>("C:/ships.xml", shipsName);
 
         GameObject[] blocks= GameObject.FindGameObjectsWithTag("EditorOnly");
         for (int i = 0; i < blocks.Length; i++)

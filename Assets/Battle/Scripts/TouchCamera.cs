@@ -35,7 +35,7 @@ public class TouchCamera : MonoBehaviour {
 
     void Update() {
 
-        if (isTracking)
+        if (isTracking)//tracking to shps
         {
             Vector3 pos = new Vector3(ship.transform.position.x, ship.transform.position.y, -10);
             transform.position = pos;

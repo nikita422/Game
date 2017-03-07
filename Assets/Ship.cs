@@ -9,9 +9,9 @@ using System.Collections.Generic;
 
 public class Ship  {
 
-
-   public  string name;
-   public List<Block> blocks;
+    
+    public  string name;
+    public List<Block> blocks;
     public class Block
     {
 
