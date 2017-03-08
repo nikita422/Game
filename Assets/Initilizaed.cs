@@ -14,14 +14,14 @@ public class Initilizaed : MonoBehaviour {
          
          */
     List<string> shipsName;
-    public GameObject slotShip;//btn
+    
     GameObject PlayerCoreBlock;
     GameObject  EnemyCoreBlock;
     
 
 	void Start () {
         shipsName = new List<string>();
-        shipsName= Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ds.xml");
+        //shipsName= Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ds.xml");
 
         PlayerCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
         PlayerCoreBlock.tag = "Player";

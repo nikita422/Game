@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 using UnityEngine;
 
-namespace Com.Nravo.FlipTheBoard.PersistantStorage
+namespace Co/m.Nravo.FlipTheBoard.PersistantStorage
 {
     /// <summary>
     /// Class provides static method to serialize and encrypt data to XML
@@ -122,6 +122,11 @@ namespace Com.Nravo.FlipTheBoard.PersistantStorage
             result.Mode = CipherMode.ECB;
             result.Padding = PaddingMode.PKCS7;
             return result;
+        }
+
+        internal static T Load<T>()
+        {
+            throw new NotImplementedException();
         }
 #endif
         #endregion

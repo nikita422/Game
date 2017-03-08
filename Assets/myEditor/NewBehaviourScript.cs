@@ -30,7 +30,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         shipsName = new List<string>();
-        shipsName = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ships.xml");
+     //   shipsName = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ships.xml");
         parent = GameObject.Find("0");
     }
 
