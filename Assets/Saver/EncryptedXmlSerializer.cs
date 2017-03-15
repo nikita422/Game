@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 using UnityEngine;
 
-namespace Co/m.Nravo.FlipTheBoard.PersistantStorage
+namespace Com.Nravo.FlipTheBoard.PersistantStorage
 {
     /// <summary>
     /// Class provides static method to serialize and encrypt data to XML

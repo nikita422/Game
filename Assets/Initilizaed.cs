@@ -8,20 +8,20 @@ public class Initilizaed : MonoBehaviour {
      класс работающий перед началом боля
      иницилизирует два корабля, собирает их
      Дает старт боя
-     
-        возможно играет типо влет из простарнства    
+     возможно играет типо влет из простарнства    
          
          
          */
-    List<string> shipsName;
+    Ship ship;
+    Ship enemyShip;
     
     GameObject PlayerCoreBlock;
     GameObject  EnemyCoreBlock;
     
 
 	void Start () {
-        shipsName = new List<string>();
-        //shipsName= Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ds.xml");
+
+        ship = Out.Saver.NowShips;
 
         PlayerCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
         PlayerCoreBlock.tag = "Player";
@@ -31,13 +31,13 @@ public class Initilizaed : MonoBehaviour {
 
         
 
-        //initShipp(true,"ds");
+        initShipp(true,ship.blocks);
 
     }
 	
      
 
-    void initShipp(bool _isPlayer, string _name)
+    void initShipp(bool _isPlayer, List<Ship.Block> _blocks)
     {
         Transform tr_parent;
         if (_isPlayer)
@@ -48,13 +48,11 @@ public class Initilizaed : MonoBehaviour {
         {
             tr_parent = EnemyCoreBlock.transform;
         }
-        List<Ship.Block>  pBlocks = new List<Ship.Block>();
-        Ship pShip = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<Ship>("C:/" + _name + ".xml");
-        pBlocks = pShip.blocks;
-        for (int i = 0; i < pBlocks.Count; i++)
+       
+        for (int i = 0; i < _blocks.Count; i++)
         {
-            GameObject block = Instantiate((GameObject)Resources.Load("ShipsBlock/" + pBlocks[i].name, typeof(GameObject)),tr_parent );
-            block.transform.position = pBlocks[i].pos;
+            GameObject block = Instantiate((GameObject)Resources.Load("ShipsBlock/" + _blocks[i].name, typeof(GameObject)),tr_parent );
+            block.transform.position = _blocks[i].pos;
         }
         if (_isPlayer)
         {
@@ -69,7 +67,7 @@ public class Initilizaed : MonoBehaviour {
     public void go()
     {
         EnemyCoreBlock.SetActive(true);
-        PlayerCoreBlock.SetActive(false);
+        PlayerCoreBlock.SetActive(true);
     }
 
 

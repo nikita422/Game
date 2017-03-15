@@ -2,36 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-public class NewBehaviourScript : MonoBehaviour
+public class Editor : MonoBehaviour
 {
     /*
-     редактор
-     
-         слотовая система сохраненийы
+     * типо если блоков нет, то нормик грузи только парента
+     редактор    
+     слотовая система сохраненийы
          */
-
-    
-
-     
+    Ship ship;
     GameObject parent;
-    List<string> shipsName;
  
-    /*
-                 
-         
-            
-         
-         
-         */
-
-
     public GameObject curBlock;
 
     void Start()
     {
-        shipsName = new List<string>();
-     //   shipsName = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<List<string>>("C:/ships.xml");
-        parent = GameObject.Find("0");
+        loadShipFromSaver();
+        parent = GameObject.Find("Parent");
+        
     }
 
 
@@ -47,8 +34,13 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void instance(string name,Vector2 _pos)
     {
+        if (!parent)
+        {
+            parent = GameObject.Find("Parent");
+        }
        GameObject block = Instantiate((GameObject)Resources.Load("ShipsBlock/" + name, typeof(GameObject)), parent.transform);
-        block.transform.position = _pos;
+       block.transform.position = _pos;
+       block.tag = "EditorOnly";
     }
 
 
@@ -109,41 +101,40 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
- 
 
-
-
-    public void save()
+    void save()
     {
         Ship ship = new Ship();
-        shipsName.Add( (shipsName.Count+1).ToString());
-        Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Save<List<string>>("C:/ships.xml", shipsName);
-
-        GameObject[] blocks= GameObject.FindGameObjectsWithTag("EditorOnly");
+        GameObject[] blocks = GameObject.FindGameObjectsWithTag("EditorOnly");
         for (int i = 0; i < blocks.Length; i++)
         {
-            string name = blocks[i].name.Substring(0,1); //get type + number-------------
-            ship.addBlock(name, blocks[i].transform.position); 
+            string name = blocks[i].name.Substring(0, 1); //get type + number-------------
+            ship.addBlock(name, blocks[i].transform.position);
         }
-
-        Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Save<Ship>("C:/ds.xml", ship);
-
-
+        ship.name = Out.Saver.NowShips.name;
+        Out.Saver.save.saveActiveShip(ship);
     }
-    public void load()
+
+    public void loadShipFromSaver()
     {
-        Ship ship = new Ship();
-
-        ship = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<Ship>("C:/ds.xml");
-
+        ship = new Ship();
+        ship = Out.Saver.NowShips;
+        print(Out.Saver.NowShips);
         List<Ship.Block> blocks = new List<Ship.Block>();
+
         blocks = ship.blocks;
         for (int i = 0; i < blocks.Count; i++)
         {
             instance(blocks[i].name, blocks[i].pos);
         }
+
     }
 
+    public void goMenu()
+    {
+        save();
+        Application.LoadLevel(0);
+    }
 
     public void clear()
     {
