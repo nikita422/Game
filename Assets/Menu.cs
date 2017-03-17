@@ -15,8 +15,7 @@ public class Menu : MonoBehaviour {
         nameShips = Out.Saver.save.nameShips;
       
         GameObject.Find("Slot1").transform.GetChild(0).GetComponent<Text>().text = nameShips[0];
-        //GameObject.Find("Slot2").transform.GetChild(0).GetComponent<Text>().text = nameShips[1];
-       
+        //GameObject.Find("Slot2").transform.GetChild(0).GetComponent<Text>().text = nameShips[1]  
     }
 	
  
@@ -26,7 +25,6 @@ public class Menu : MonoBehaviour {
     {
         nowShip = _n;
         Out.Saver.NowShips = Out.Saver.save.ships[_n - 1];
-    
         nowshiptext.text = "Now ship: " + nameShips[_n-1];
     }
 

@@ -9,10 +9,9 @@ public class Initilizaed : MonoBehaviour {
      иницилизирует два корабля, собирает их
      Дает старт боя
      возможно играет типо влет из простарнства    
-         
-         
+                  
          */
-    Ship ship;
+    Ship playerShip;
     Ship enemyShip;
     
     GameObject PlayerCoreBlock;
@@ -21,17 +20,15 @@ public class Initilizaed : MonoBehaviour {
 
 	void Start () {
 
-        ship = Out.Saver.NowShips;
-
+        playerShip = Out.Saver.NowShips;
         PlayerCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
         PlayerCoreBlock.tag = "Player";
+        PlayerCoreBlock.name = "PlayerShip";
 
         EnemyCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
         EnemyCoreBlock.tag = "Enemy";
-
-        
-
-        initShipp(true,ship.blocks);
+        EnemyCoreBlock.name = "EnemyShip";
+        initShipp(true, playerShip.blocks);
 
     }
 	

@@ -26,6 +26,8 @@ public class Core : MonoBehaviour
 
     void Start()
     {
+       
+
         stateBar = Instantiate(Resources.Load("StateBar") as GameObject, GameObject.FindGameObjectWithTag("canvas").transform);
         stateBar.GetComponent<StateBar>().Ship = this.gameObject;
         expl = Resources.Load("exp_big") as GameObject;
