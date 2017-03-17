@@ -6,12 +6,12 @@ public class Menu : MonoBehaviour {
 
     
     List<string> nameShips;
-    Text nowshiptext;
+     
      
     public int nowShip;
 
  	void Start () {
-        nowshiptext = GameObject.Find("NowShipText").GetComponent<Text>();
+     
         nameShips = Out.Saver.save.nameShips;
       
         GameObject.Find("Slot1").transform.GetChild(0).GetComponent<Text>().text = nameShips[0];
@@ -25,7 +25,7 @@ public class Menu : MonoBehaviour {
     {
         nowShip = _n;
         Out.Saver.NowShips = Out.Saver.save.ships[_n - 1];
-        nowshiptext.text = "Now ship: " + nameShips[_n-1];
+        //nowshiptext.text = "Now ship: " + nameShips[_n-1];
     }
 
     public void goEditor() {
