@@ -9,9 +9,9 @@ public class Core : MonoBehaviour
          
          */
 
-    GameObject stateBar;
- 
-    
+
+
+    public StateBar stateBar;
     GameObject hit_explosion;
     public bool isPlayer;
  
@@ -25,15 +25,21 @@ public class Core : MonoBehaviour
     
 
     void Start()
-    {
-       
+    { 
 
-        stateBar = Instantiate(Resources.Load("StateBar") as GameObject, GameObject.FindGameObjectWithTag("canvas").transform);
-        stateBar.GetComponent<StateBar>().Ship = this.gameObject;
         expl = Resources.Load("exp_big") as GameObject;
         hit_explosion = Resources.Load("exp") as GameObject;
         curEnergy = maxEnergy;
         curHealth = maxHealth;
+
+        if (isPlayer)
+        {
+            stateBar = GameObject.FindGameObjectWithTag("canvas").transform.FindChild("PlayerBar").GetComponent<StateBar>();
+        }
+        else
+        {
+            stateBar = GameObject.FindGameObjectWithTag("canvas").transform.FindChild("EnemyBar").GetComponent<StateBar>();
+        }
     }
 
     //void findNearestTarget()
@@ -77,49 +83,48 @@ public class Core : MonoBehaviour
 
         if (curEnergy < maxEnergy)
         {
-            if (curEnergy < 0) curEnergy = 0;
-            curEnergy += deltaEnergy;
+            changeEnergyOn(deltaEnergy);
         }
         else
         {
             curEnergy = maxEnergy;
         }
-
-        if (curHealth < 0)
-        {
-            gameover();
-        }
+ 
 
     }
 
+    public void changeEnergyOn(float _value)
+    {
 
+        curEnergy += _value;
+        if (curEnergy < 0)
+        {
+            curEnergy = 0;
+        }
+        stateBar.changeEnergy(maxEnergy, curEnergy);
+
+    }
+    public void changeHealthOn(float _value)
+    {
+        curHealth += _value;
+        if (curHealth < 0)
+        {
+            curHealth = 0;
+            gameover();
+        }
+        stateBar.changeHealth(maxHealth, curHealth);
+    }
     public void gameover()
     {
          
-
-
         for (int i = 0; i < 4; i++)
         {
             GameObject exp = Instantiate(expl, Random.insideUnitSphere+transform.position, Quaternion.identity);
             Destroy(exp, 2);
         }
-       
-
-
-
-
-
-
+     
         Destroy(this.gameObject);
     }
-
-    private void OnDestroy()
-    {
-        Destroy(stateBar);
-    }
-
-   
- 
 
     void OnTriggerEnter2D(Collider2D other)
     {

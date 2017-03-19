@@ -1,50 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class StateBar : MonoBehaviour {
 
-    public GameObject Hbar, Ebar;
-    public GameObject Ship;
+     Image Hbar, Ebar;
 
-    Transform shipTransform;
-
-    public GameObject barLinePrefab;
-    GameObject line;
-    LineRenderer barLineRen;
-
-    Core core;
-    float calcHealth, calcEnergy;
-
-    void Start()
+    private void Start()
     {
-        core = Ship.GetComponent<Core>();
-
-        shipTransform = Ship.transform;
-        line = Instantiate(barLinePrefab,this.transform);
-        barLineRen = line.GetComponent<LineRenderer>();
-        
+         
+       Hbar = transform.GetChild(1).transform.GetChild(0).GetComponent<Image>();
+       Ebar = transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
     }
 
-
-    void Update()
-    {
-
-        barLineRen.SetPosition(0, shipTransform.position);
-        barLineRen.SetPosition(1, Camera.main.ScreenToWorldPoint(transform.position));
-
-        transform.position = Camera.main.WorldToScreenPoint(shipTransform.position + new Vector3(-2, 2, 0));
-
-
-
-        calcHealth = core.curHealth / core.maxHealth;
-        
-        Hbar.transform.localScale = new Vector3(calcHealth, transform.localScale.y, transform.localScale.z);
-
-        calcEnergy = core.curEnergy / core.maxEnergy;
-        Ebar.transform.localScale = new Vector3(calcEnergy, transform.localScale.y, transform.localScale.z);
-
+    public void changeHealth(float _max,float _cur)
+    {  
+        Hbar.fillAmount = _cur / _max;
     }
 
-    
+    public void changeEnergy(float _max, float _cur)
+    {
+        Ebar.fillAmount = _cur / _max;
+    }
+
 }

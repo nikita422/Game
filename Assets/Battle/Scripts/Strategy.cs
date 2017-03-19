@@ -21,7 +21,7 @@ public class Strategy : MonoBehaviour
 
     private void Start()
     {
-        fireBtn = GameObject.FindGameObjectWithTag("fireBtn").GetComponent<FireBtn>();
+      //  fireBtn = GameObject.FindGameObjectWithTag("fireBtn").GetComponent<FireBtn>();
         shipPlayer = GameObject.FindGameObjectWithTag("Player");    
     }
 

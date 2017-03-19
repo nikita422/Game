@@ -26,7 +26,7 @@ public class Fire_manager : MonoBehaviour
 
         if (this.gameObject.tag == "Player")
         {       
-            target = GameObject.FindGameObjectWithTag("Enemy").transform;
+            //target = GameObject.FindGameObjectWithTag("Enemy").transform;
         }
         else
         {             

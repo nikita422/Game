@@ -15,26 +15,24 @@ public class Initilizaed : MonoBehaviour {
     Ship enemyShip;
     
     GameObject PlayerCoreBlock;
-    GameObject  EnemyCoreBlock;
+    GameObject EnemyCoreBlock;
     
 
 	void Start () {
 
         playerShip = Out.Saver.NowShips;
-        PlayerCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
-        PlayerCoreBlock.tag = "Player";
-        PlayerCoreBlock.name = "PlayerShip";
 
-        EnemyCoreBlock = Instantiate<GameObject>(Resources.Load("starter") as GameObject);
-        EnemyCoreBlock.tag = "Enemy";
-        EnemyCoreBlock.name = "EnemyShip";
-        initShipp(true, playerShip.blocks);
+        PlayerCoreBlock = GameObject.FindGameObjectWithTag("Player");
+        EnemyCoreBlock = GameObject.FindGameObjectWithTag("Enemy");
+
+        
+      //  initShip(true, playerShip.blocks);
 
     }
 	
      
 
-    void initShipp(bool _isPlayer, List<Ship.Block> _blocks)
+    void initShip(bool _isPlayer, List<Ship.Block> _blocks)
     {
         Transform tr_parent;
         if (_isPlayer)

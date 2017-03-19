@@ -33,7 +33,7 @@ public class Move : MonoBehaviour
         if (!core.isPlayer)
         {
             target = GameObject.FindGameObjectWithTag("Player");
-            StartCoroutine("enemyBrain");
+         //   StartCoroutine("enemyBrain");
         }
         
     }
