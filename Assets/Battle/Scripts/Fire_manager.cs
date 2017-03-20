@@ -7,12 +7,12 @@ public class Fire_manager : MonoBehaviour
     //2
     Core core;
 
-    [HideInInspector]
+   // [HideInInspector]
     public Transform target;
 
     public float maxFireDist = 20;
 
-    [HideInInspector]
+   // [HideInInspector]
     public bool autoFire = false;
 
     public void setAutoFire(bool _af)
@@ -26,12 +26,12 @@ public class Fire_manager : MonoBehaviour
 
         if (this.gameObject.tag == "Player")
         {       
-            //target = GameObject.FindGameObjectWithTag("Enemy").transform;
+             target = GameObject.FindGameObjectWithTag("Enemy").transform;
         }
         else
         {             
-            //r
-         //   target = GameObject.FindGameObjectWithTag("Player").transform;
+             
+           target = GameObject.FindGameObjectWithTag("Player").transform;
         }
     }
 
@@ -56,8 +56,10 @@ public class Fire_manager : MonoBehaviour
     {
         if (autoFire&&target)
         {
+             
             if (Vector2.Distance(transform.position, target.transform.position) < maxFireDist && core.curEnergy>30)
             {
+                print(1);
                 float time = Random.Range(0, 5f);
                 StartCoroutine(fire_AI(time));
             }

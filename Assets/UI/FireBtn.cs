@@ -10,7 +10,7 @@ public class FireBtn : MonoBehaviour {
 
     void Start () {
         firebtn = GetComponent<Button>();
-         firebtn.onClick.AddListener(onClick);
+        firebtn.onClick.AddListener(onClick);
         ship = GameObject.FindGameObjectWithTag("Player");
 	}
 	

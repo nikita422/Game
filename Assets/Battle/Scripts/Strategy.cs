@@ -10,7 +10,7 @@ public class Strategy : MonoBehaviour
    
     public GameObject shipPlayer;
     public LayerMask lm;
-    FireBtn fireBtn;
+    
     
 
     public GameObject lineTarget;
@@ -21,7 +21,7 @@ public class Strategy : MonoBehaviour
 
     private void Start()
     {
-      //  fireBtn = GameObject.FindGameObjectWithTag("fireBtn").GetComponent<FireBtn>();
+        
         shipPlayer = GameObject.FindGameObjectWithTag("Player");    
     }
 
@@ -64,6 +64,7 @@ public class Strategy : MonoBehaviour
                 if (hitColliders[0].gameObject.transform.parent.gameObject.tag == "Player")
                 {
                     is_interact = true;
+
                 }
 
                 //если кораблей несколько, добаялвем выбор разных целей, а так ппо
@@ -74,14 +75,14 @@ public class Strategy : MonoBehaviour
 
             }
 
-
+        }
 
 
 
             if (is_interact)
             {
                 lineTarget.SetActive(true);
-
+                
                 Vector3 input = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 ship = shipPlayer.transform.position;
                 Vector3 line1 = new Vector3(ship.x, ship.y, 5);
@@ -99,6 +100,7 @@ public class Strategy : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0) && is_interact)
             {
+                 
                 shipPlayer.GetComponent<Move>().go_to(Camera.main.ScreenToWorldPoint(Input.mousePosition));
                 is_interact = false;
             }
@@ -119,4 +121,4 @@ public class Strategy : MonoBehaviour
 
     //    Gizmos.DrawSphere( mouposz0, kZoom/6);
     //}
-}
+
