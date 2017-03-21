@@ -20,16 +20,16 @@ public class Initilizaed : MonoBehaviour {
 
 	void Start () {
 
-        playerShip = Out.Saver.NowShips;
-
+ 
         PlayerCoreBlock = GameObject.FindGameObjectWithTag("Player");
         EnemyCoreBlock = GameObject.FindGameObjectWithTag("Enemy");
 
         
-      //  initShip(true, playerShip.blocks);
-
+       // initShip(true, Out.Saver.NowShips.blocks);
+        //сделать редактор и инит второй шип
     }
 	
+   
      
 
     void initShip(bool _isPlayer, List<Ship.Block> _blocks)
@@ -37,13 +37,13 @@ public class Initilizaed : MonoBehaviour {
         Transform tr_parent;
         if (_isPlayer)
         {
-            tr_parent = PlayerCoreBlock.transform;
+            tr_parent = PlayerCoreBlock.transform.FindChild("Sprite").transform;
         }
         else
         {
-            tr_parent = EnemyCoreBlock.transform;
+            tr_parent = EnemyCoreBlock.transform.FindChild("Sprite").transform;
         }
-       
+
         for (int i = 0; i < _blocks.Count; i++)
         {
             GameObject block = Instantiate((GameObject)Resources.Load("ShipsBlock/" + _blocks[i].name, typeof(GameObject)),tr_parent );

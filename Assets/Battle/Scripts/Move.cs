@@ -23,7 +23,6 @@ public class Move : MonoBehaviour
     Core core;
 
     public bool move = false;
-
     public float maxSpeed, curSpeed;
     public float rotateSpeed;
 
@@ -37,6 +36,12 @@ public class Move : MonoBehaviour
         }
         
     }
+
+    public void goON()
+    {
+        StartCoroutine("enemyBrain");
+    }
+
 
     void Update()
     {

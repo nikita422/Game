@@ -61,8 +61,6 @@ public class Editor : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && curBlock)
         {
             curBlock = null;
-            
-
         }
 
         if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject() && !curBlock)
@@ -119,7 +117,7 @@ public class Editor : MonoBehaviour
     {
         ship = new Ship();
         ship = Out.Saver.NowShips;
-        print(Out.Saver.NowShips);
+        print(Out.Saver.NowShips.name);
         List<Ship.Block> blocks = new List<Ship.Block>();
 
         blocks = ship.blocks;
