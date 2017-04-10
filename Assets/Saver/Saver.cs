@@ -13,23 +13,20 @@ namespace Out
          нужно хранить:
             Все корабли, их имена
              */
-        public static Save save;
-        public static Ship NowShips;
+        public static Save gamesave;
+       
+       
+
 
         static Saver()
         {
-            save=Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<Save>("C:/save.xml");          
-            Debug.Log("load_save_ok");
+            gamesave = Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Load<Save>("C:/save.xml");           
         }
 
 
         public static void Save()
         {
-            Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Save<Save>("C:/save.xml", save);
+            Com.Nravo.FlipTheBoard.PersistantStorage.EncryptedXmlSerializer.Save<Save>("C:/save.xml", gamesave);           
         }
-     
-    
-
-
     }
 }

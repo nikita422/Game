@@ -4,28 +4,49 @@ using UnityEngine;
 
 public class Save
 {
+    //0.2
+    //динамичная часть
+
     public List<Ship> ships;
-    public List<string> nameShips;
+    public List<string> nameShips;    
+    public int numberAct;
+ 
+
 
     public Save()
-    {
+    {   
+
         nameShips = new List<string>();
         ships = new List<Ship>();
- 
+        
     }
-
-
+    public void setActiveShip(int _n)
+    {
+        
+        numberAct = _n;
+         
+    }
+    public List<string> getNamesShip()
+    {
+        while (nameShips.Count != 3)
+        {       
+            nameShips.Add("EmptySlot");
+        }
+         
+        return nameShips;
+    }
     public void saveActiveShip(Ship _ship)
-    {   
-        for (int i = 0; i < nameShips.Count; i++)
+    {
+         
+        ships[numberAct] = _ship;
+    }
+    public Ship getActiveShip()
+    {
+        while (ships.Count != 3)
         {
-            
-            if (nameShips[i] == _ship.name)
-            {
-                ships[i] =Out.Saver.NowShips;//tut pizdec
-                ships[i] = _ship;
-                nameShips[i] = _ship.name;
-            }
-        }        
+            ships.Add(new Ship());
+        }
+        
+        return ships[numberAct];
     }
 }

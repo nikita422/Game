@@ -30,6 +30,7 @@ public class Ship  {
       public Ship()
     {
         blocks = new List<Block>();
+        name = "NoName";
     }
      
     public void addBlock(string _name, Vector2 _pos)

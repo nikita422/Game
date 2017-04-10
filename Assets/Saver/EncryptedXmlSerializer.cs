@@ -1,4 +1,4 @@
-﻿ 
+﻿
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -64,7 +64,7 @@ namespace Com.Nravo.FlipTheBoard.PersistantStorage
         /// <typeparam name="T">Type of object to serialize</typeparam>
         public static void Save<T>(string path, object value) where T : class
         {
-             
+
             var serializer = new XmlSerializer(typeof(T));
             using (var stream = new MemoryStream())
             {
