@@ -15,7 +15,9 @@ public class Initilizaed : MonoBehaviour {
     
    public GameObject PlayerCoreBlock;
     public GameObject EnemyCoreBlock;
-    
+
+    public LayerMask playerLayer;
+    public LayerMask enemyLayer;
 
 	void Start () {
 
@@ -53,6 +55,14 @@ public class Initilizaed : MonoBehaviour {
             
             block.transform.position = _blocks[i].pos+ (Vector2)tr_parent.position;
             block.transform.rotation = tr_parent.rotation;
+            if (_isPlayer)
+            {
+                block.layer =LayerMask.NameToLayer("TargetPlayer");
+            }
+            else
+            {
+                block.layer = LayerMask.NameToLayer("TargetEnemy");
+            }
         }
         if (!_isPlayer)
         {

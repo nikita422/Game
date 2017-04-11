@@ -22,13 +22,18 @@ public class Core : MonoBehaviour
 
     GameObject expl;
 
-    
+    /*
+     Два объекта, оба с 2дэ коллайдерами
+         на один из них вешаем риджибоди 2дэ ставим кинематик и галочку истриггер в 2дэ коллайдере
+         
+         
+         */
 
     void Start()
     { 
 
         expl = Resources.Load("exp_big") as GameObject;
-        hit_explosion = Resources.Load("exp") as GameObject;
+        hit_explosion = Resources.Load("Explosion") as GameObject;
         curEnergy = maxEnergy;
         curHealth = maxHealth;
 
@@ -125,20 +130,19 @@ public class Core : MonoBehaviour
      
         Destroy(this.gameObject);
     }
-
-    void OnTriggerEnter2D(Collider2D other)
+    public void hit(Collider2D other)
     {
 
-        if (other.tag == "Laser")
-        {
+      
 
-            print("HIY");
-                GameObject expl = Instantiate(hit_explosion, other.transform.position, Quaternion.identity);
-                Destroy(expl, 0.8f);
-                curHealth -= 5;
-                Destroy(other.gameObject);
-            
-        }
+             
+            GameObject expl = Instantiate(hit_explosion, other.transform.position, Quaternion.identity);
+            Destroy(expl, 0.8f);
+            curHealth -= 5;
+            Destroy(other.gameObject);
+
+        
 
     }
+
 }
