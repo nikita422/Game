@@ -31,15 +31,17 @@ public class TouchCamera : MonoBehaviour
 
     private void Start()
     {
-        ship = GameObject.FindGameObjectWithTag("Player");
-        strategy = GetComponent<Strategy>();
-        camera = Camera.main;
+        
+            ship = GameObject.FindGameObjectWithTag("Player");
+            strategy = GetComponent<Strategy>();
+            camera = Camera.main;
+        
     }
 
     void Update()
     {
 
-        if (isTracking)//tracking to shps
+        if (isTracking)
         {
             Vector3 pos = new Vector3(ship.transform.position.x, ship.transform.position.y, -10);
             transform.position = pos;

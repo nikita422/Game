@@ -16,7 +16,13 @@ public class Strategy : MonoBehaviour
     public GameObject lineTarget;
     public bool is_interact;//for linetarget
 
-   
+    public void goON()
+    {
+
+        GameObject.FindGameObjectWithTag("Enemy").GetComponent<Move>().goON();
+
+
+}
 
 
     private void Start()

@@ -7,11 +7,14 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[Serializable]
 public class Ship  {
 
     
     public  string name;
     public List<Block> blocks;
+
+    [Serializable]
     public class Block
     {
 

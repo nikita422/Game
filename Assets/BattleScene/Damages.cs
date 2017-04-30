@@ -9,7 +9,7 @@ public class Damages : MonoBehaviour
     {
         if (collision.tag == "Laser")
         {
-            transform.parent.parent.GetComponent<Core>().hit(collision);
+            transform.parent.parent.GetComponent<Core>().hit(collision,collision.tag);
         }
     }
 }

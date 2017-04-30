@@ -4,14 +4,14 @@ using UnityEngine;
  
 public class Fire_manager : MonoBehaviour
 {
-    //2
+    
     Core core;
 
    // [HideInInspector]
     public Transform target;
 
-    public float maxFireDist = 20;
-
+    public float reloadCannon, reloadLaser, reloadRocket,reloadTurret;
+ 
    // [HideInInspector]
     public bool autoFire = false;
 
@@ -24,74 +24,162 @@ public class Fire_manager : MonoBehaviour
     {
         core = GetComponent<Core>();
 
-        if (this.gameObject.tag == "Player")
-        {       
-            target = GameObject.FindGameObjectWithTag("Enemy").transform;
+        if (this.gameObject.tag == "Enemy")
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
         }
-        else
-        {             
-             
-          target = GameObject.FindGameObjectWithTag("Player").transform;
-        }
+       
     }
 
-    public List<Laser_turret> turrets;
+    public List<LaserGun> LaserGuns;
+    public List<Cannon> cannons;
+    public List<RockerLauncher> rocketLaunchers;
+    public List<Turret> turrets;
 
+    public void addCannon(Cannon _cannon)
+    {
+        cannons.Add(_cannon);
+    }
+    public void addRocketLauncher(RockerLauncher _rocketLauncher)
+    {
+        rocketLaunchers.Add(_rocketLauncher);
+    }
     public void addtarget(GameObject _target)
     {
         target = _target.transform;
     }
+    public void addLaserGun(LaserGun _lt)
+    {
+        LaserGuns.Add(_lt);
+    }
+
+
 
     public void removetarget()
     {
         target = null;
     }
 
-    public void addTurret(Laser_turret _lt)
-    {
-        turrets.Add(_lt);
-    }
-
     private void Update()
     {
+        reloadGuns();
         if (autoFire&&target)
         {
-             
-            if (Vector2.Distance(transform.position, target.transform.position) < maxFireDist && core.curEnergy>30)
+            fireTurrets();
+        }
+    }
+
+    void reloadGuns()
+    {
+        if (reloadCannon < 100)
+        {
+            if (reloadCannon < 0)
             {
-                print(1);
-                float time = Random.Range(0, 5f);
-                StartCoroutine(fire_AI(time));
+                reloadCannon = 0;
+            }
+            reloadCannon += 1;
+        }
+        if (reloadLaser < 100)
+        {
+            if (reloadLaser < 0)
+            {
+                reloadLaser = 0;
+            }
+            reloadLaser += 1;
+        }
+        if (reloadRocket < 100)
+        {
+            if (reloadRocket < 0)
+            {
+                reloadRocket = 0;
+            }
+            reloadRocket += 1;
+        }
+        if (reloadTurret < 100)
+        {
+            if (reloadRocket < 0)
+            {
+                reloadRocket = 0;
+            }
+            reloadRocket += 1;
+        }
+    }
+
+    public void fireTurrets()
+    {
+        if (!target)
+        {
+            if (!isFindTarget()) return;
+        }
+    
+        for (int i = 0; i < turrets.Count; i++)
+        {
+            if (reloadLaser > 20)
+            {
+                reloadTurret -= 20;
+                turrets[i].fire();
+            }      
+        }
+    }
+
+
+    
+
+    public void fireCannons()
+    {
+        for (int i = 0; i < cannons.Count; i++)
+        {
+            if (reloadCannon > 0)
+            {
+                reloadCannon -= 20;
+                cannons[i].fire();
+            }
+            
+        }
+    }
+    public void fireRockets()
+    {
+        for (int i = 0; i < rocketLaunchers.Count; i++)
+        {
+            if (reloadRocket > 20)
+            {
+                reloadRocket -= 20;
+                rocketLaunchers[i].fire();
+            }
+        }
+    }
+    public void fireLaserGuns()
+    {
+        for (int i = 0; i < LaserGuns.Count; i++)
+        {
+            if (reloadLaser > 20)
+            {
+                reloadLaser -= 20;
+                LaserGuns[i].fire();
             }
         }
     }
 
-    public void fire()
+    bool isFindTarget()
     {
-        if (!target) return;
-    
-        for (int i = 0; i < turrets.Count; i++)
-        {            
-                turrets[i].fire(target.position);       
+        if (this.gameObject.tag == "Enemy")
+        {
+            return false;
         }
+        if (this.gameObject.tag == "Player")
+        {
+            target= GameObject.FindGameObjectWithTag("Enemy").transform;
+            return true;
+        }
+        return false;
     }
 
-
-    IEnumerator fire_AI(float _delay)
+    IEnumerator fire_AI()
     {
-        yield return new WaitForSeconds(_delay);
-        fire();
-        
+        yield return new WaitForSeconds(Random.Range(0, 5f));
+        fireTurrets();     
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        if(target)
-        Gizmos.DrawLine(transform.position, target.transform.position);
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(transform.position, maxFireDist);
-    }
+ 
 
 }
 

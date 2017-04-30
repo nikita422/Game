@@ -1,0 +1,980 @@
+fileFormatVersion: 2
+guid: 2675c15dc5e21bc4ebad18c3f9a84662
+timeCreated: 1493557867
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Interface buttons set for space games 3_0
+    21300002: Interface buttons set for space games 3_1
+    21300004: Interface buttons set for space games 3_2
+    21300006: Interface buttons set for space games 3_3
+    21300008: Interface buttons set for space games 3_4
+    21300010: Interface buttons set for space games 3_5
+    21300012: Interface buttons set for space games 3_6
+    21300014: Interface buttons set for space games 3_7
+    21300016: Interface buttons set for space games 3_8
+    21300018: Interface buttons set for space games 3_9
+    21300020: Interface buttons set for space games 3_10
+    21300022: Interface buttons set for space games 3_11
+    21300024: Interface buttons set for space games 3_12
+    21300026: Interface buttons set for space games 3_13
+    21300028: Interface buttons set for space games 3_14
+    21300030: Interface buttons set for space games 3_15
+    21300032: Interface buttons set for space games 3_16
+    21300034: Interface buttons set for space games 3_17
+    21300036: Interface buttons set for space games 3_18
+    21300038: Interface buttons set for space games 3_19
+    21300040: Interface buttons set for space games 3_20
+    21300042: Interface buttons set for space games 3_21
+    21300044: Interface buttons set for space games 3_22
+    21300046: Interface buttons set for space games 3_23
+    21300048: Interface buttons set for space games 3_24
+    21300050: Interface buttons set for space games 3_25
+    21300052: Interface buttons set for space games 3_26
+    21300054: Interface buttons set for space games 3_27
+    21300056: Interface buttons set for space games 3_28
+    21300058: Interface buttons set for space games 3_29
+    21300060: Interface buttons set for space games 3_30
+    21300062: Interface buttons set for space games 3_31
+    21300064: Interface buttons set for space games 3_32
+    21300066: Interface buttons set for space games 3_33
+    21300068: Interface buttons set for space games 3_34
+    21300070: Interface buttons set for space games 3_35
+    21300072: Interface buttons set for space games 3_36
+    21300074: Interface buttons set for space games 3_37
+    21300076: Interface buttons set for space games 3_38
+    21300078: Interface buttons set for space games 3_39
+    21300080: Interface buttons set for space games 3_40
+    21300082: Interface buttons set for space games 3_41
+    21300084: Interface buttons set for space games 3_42
+    21300086: Interface buttons set for space games 3_43
+    21300088: Interface buttons set for space games 3_44
+    21300090: Interface buttons set for space games 3_45
+    21300092: Interface buttons set for space games 3_46
+    21300094: Interface buttons set for space games 3_47
+    21300096: Interface buttons set for space games 3_48
+    21300098: Interface buttons set for space games 3_49
+    21300100: Interface buttons set for space games 3_50
+    21300102: Interface buttons set for space games 3_51
+    21300104: Interface buttons set for space games 3_52
+    21300106: Interface buttons set for space games 3_53
+    21300108: Interface buttons set for space games 3_54
+    21300110: Interface buttons set for space games 3_55
+    21300112: Interface buttons set for space games 3_56
+    21300114: Interface buttons set for space games 3_57
+    21300116: Interface buttons set for space games 3_58
+    21300118: Interface buttons set for space games 3_59
+    21300120: Interface buttons set for space games 3_60
+    21300122: Interface buttons set for space games 3_61
+    21300124: Interface buttons set for space games 3_62
+    21300126: Interface buttons set for space games 3_63
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 911
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_1
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 911
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 911
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_3
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 911
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 911
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_5
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 911
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_6
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 911
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_7
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 911
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_8
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 789
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_9
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 789
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_10
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 789
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_11
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 789
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 789
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_13
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 789
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_14
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 789
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_15
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 789
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_16
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 663
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_17
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 663
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_18
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 663
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_19
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 663
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 663
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_21
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 663
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_22
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 663
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_23
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 663
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_24
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 536
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_25
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 536
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_26
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 536
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_27
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 536
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_28
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 536
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_29
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 536
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_30
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 536
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_31
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 536
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_32
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 408
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_33
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 408
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_34
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 408
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_35
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 408
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 408
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_37
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 408
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_38
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 408
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_39
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 408
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_40
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 282
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_41
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 282
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_42
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 282
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_43
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 282
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 282
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_45
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 282
+        width: 101
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_46
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 282
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_47
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 282
+        width: 102
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_48
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 158
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_49
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 158
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 158
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_51
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 158
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 158
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_53
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 158
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_54
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 158
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_55
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 158
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_56
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 33
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_57
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 33
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_58
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 33
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_59
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 33
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_60
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 33
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_61
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 33
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_62
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 33
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Interface buttons set for space games 3_63
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 33
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

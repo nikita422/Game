@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Save
 {
-    //0.2
-    //динамичная часть
 
     public List<Ship> ships;
     public List<string> nameShips;    
@@ -17,8 +15,8 @@ public class Save
     {   
 
         nameShips = new List<string>();
-        ships = new List<Ship>();
-        
+        ships = new List<Ship>(); ships.Add(new Ship()); ships.Add(new Ship()); ships.Add(new Ship()); 
+
     }
     public void setActiveShip(int _n)
     {
@@ -37,8 +35,9 @@ public class Save
     }
     public void saveActiveShip(Ship _ship)
     {
-         
+       
         ships[numberAct] = _ship;
+        
     }
     public Ship getActiveShip()
     {

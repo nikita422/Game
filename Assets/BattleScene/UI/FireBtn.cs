@@ -19,7 +19,7 @@ public class FireBtn : MonoBehaviour {
     {    
         if (ship)
         {         
-            ship.GetComponent<Fire_manager>().fire();
+            ship.GetComponent<Fire_manager>().fireTurrets();
         }
     }
 

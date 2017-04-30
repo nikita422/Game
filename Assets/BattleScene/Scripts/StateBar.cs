@@ -8,13 +8,14 @@ public class StateBar : MonoBehaviour {
 
     private void Start()
     {      
-       Hbar = transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
-       Ebar = transform.GetChild(1).transform.GetChild(0).GetComponent<Image>();
+       Ebar = transform.GetChild(0).transform.GetChild(0).GetComponent<Image>();
+       Hbar = transform.GetChild(1).transform.GetChild(0).GetComponent<Image>();
     }
 
     public void changeHealth(float _max,float _cur)
     {  
         Hbar.fillAmount = _cur / _max;
+        
     }
 
     public void changeEnergy(float _max, float _cur)
